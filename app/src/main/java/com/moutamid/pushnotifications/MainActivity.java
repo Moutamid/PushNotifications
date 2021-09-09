@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         });
         this.sentUser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (MainActivity.this.title.getText().toString().isEmpty() || MainActivity.this.messeage.getText().toString().isEmpty()|| MainActivity.this.tokenET.getText().toString().isEmpty()) {
+                 if (MainActivity.this.title.getText().toString().isEmpty() || MainActivity.this.messeage.getText().toString().isEmpty()|| MainActivity.this.tokenET.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "Enter Details", Toast.LENGTH_SHORT).show();
                 } else {
                     new FcmNotificationsSender(tokenET.getText().toString(), MainActivity.this.title.getText().toString(), MainActivity.this.messeage.getText().toString(), MainActivity.this.getApplicationContext(), MainActivity.this).SendNotifications();
